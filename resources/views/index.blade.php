@@ -6,7 +6,7 @@
     <a class="btn btn-primary mb-3" href="{{route('users.create')}}" role="button">Create User</a>
 
     <main>
-        <table class="table">
+        <table class="table table-sm">
             <thead>
             <tr>
                 <th scope="col">#</th>
@@ -34,5 +34,7 @@
             </tbody>
         </table>
     </main>
+
+    {{$users->links()}}
 
 @endsection
