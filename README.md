@@ -14,7 +14,7 @@ cd folder
 
 composer install
 
-define databese, APP_KEY in .end
+define database, APP_KEY in .end
 
 php artisan migrate --seed
 
