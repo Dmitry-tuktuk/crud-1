@@ -14,11 +14,16 @@
         </ul>
     </div>
     <div class="row mt-4">
-        <div class="col-md-3">
+        <div class="col-md-2">
             <a type="button" class="btn btn-secondary" href="{{route('users.index')}}">Back to users</a>
         </div>
         <div class="col-md-3 ">
-            <a type="button" class="btn btn-warning " href="{{route('users.edit', $user)}}">Edit</a>
+            <form method="POST" action="{{route('users.destroy', $user)}}">
+                <a type="button" class="btn btn-warning" href="{{route('users.edit', $user)}}">Edit</a>
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
         </div>
     </div>
 
